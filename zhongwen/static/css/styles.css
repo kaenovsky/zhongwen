@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 body {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2rem;
     background-color: #FFE53B;
     background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
     min-height: 100vh;
