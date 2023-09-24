@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from zhongwen.views import current_datetime, static_page
+from zhongwen.views import static_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('now/', current_datetime),
     path('<pagename>/', static_page),
 ]
