@@ -5,6 +5,6 @@ def static_page(request, pagename):
     ext_doc = open("./zhongwen/templates/{}.html".format(pagename))
     templ = Template(ext_doc.read())
     ext_doc.close()
-    ctx = Context({})
+    ctx = Context({"pagename" : pagename })
     document = templ.render(ctx)
     return HttpResponse(document)
