@@ -32,10 +32,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
-INSTALLED_APPS = [
+LOCAL_APPS = [
+
+]
+
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 ROOT_URLCONF = 'zhongwen.urls'
 
