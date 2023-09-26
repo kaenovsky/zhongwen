@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 LOCAL_APPS = [
-
+    'apps.nihao',
 ]
 
 DJANGO_APPS = [
