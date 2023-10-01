@@ -9,6 +9,11 @@ body {
     text-align: center;
 }
 
+main {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: 2rem;
 }
@@ -22,7 +27,7 @@ nav ul {
     flex-flow: row wrap;
     justify-content: center;
     list-style: none;
-    max-width: 30rem;
+    max-width: 25rem;
     margin: 0 auto;
 }
 

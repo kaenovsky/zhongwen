@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from zhongwen.views import static_page
+# from zhongwen.views import static_page
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<pagename>/', static_page),
+    path('<str:pagename>/', views.static_page),
 ]

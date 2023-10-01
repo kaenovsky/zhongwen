@@ -1,10 +1,11 @@
-from django.http import HttpResponse
-from django.template import Template, Context
+from django.shortcuts import render
+from django.http import Http404
 
 def static_page(request, pagename):
-    ext_doc = open("./zhongwen/templates/{}.html".format(pagename))
-    templ = Template(ext_doc.read())
-    ext_doc.close()
-    ctx = Context({"pagename" : pagename })
-    document = templ.render(ctx)
-    return HttpResponse(document)
+    try:
+        context = {
+            'pagename': pagename,
+        }
+        return render(request, f"{pagename}.html", context)
+    except:
+        raise Http404("Page not found")
