@@ -9,4 +9,4 @@ class Word(models.Model):
     pronun = models.CharField(max_length=100) # url to s3 audio file
 
     def __str__(self) -> str:
-        return f"English: {self.en} | Spanish: {self.es}) | Chinese: {self.zw}"
+        return f"English: {self.en} | Spanish: {self.es} | Chinese: {self.zw}"

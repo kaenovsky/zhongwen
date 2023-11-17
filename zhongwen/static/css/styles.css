@@ -50,3 +50,14 @@ nav ul li {
     color: #131313;
 }
 
+table {
+    margin: 3rem auto 1rem auto;
+}
+
+button, input[type="submit"] {
+    background: #131313;
+    color: azure;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
