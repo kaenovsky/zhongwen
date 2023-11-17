@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Palabras</h1>
-    <p>Acá veremos las palabras:</p>
-    <p>nihao - hello - hola</p>
+    <p>Acá vemos la primera palabra que vamos a aprender. Es un saludo!</p>
+    <div class="chinese-wrapper">
+        <p class="hanzi">{{ zw }}</p>
+        <p class="pinyin">{{ pinyin }}</p>
+    </div>
+    <div class="translate">
+        <p>En español: {{ es }}</p>
+        <p>En inglés: {{ en }}</p>
+    </div>
 {% endblock content %}

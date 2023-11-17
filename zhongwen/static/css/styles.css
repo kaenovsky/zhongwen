@@ -27,7 +27,7 @@ nav ul {
     flex-flow: row wrap;
     justify-content: center;
     list-style: none;
-    max-width: 25rem;
+    max-width: 30rem;
     margin: 0 auto;
 }
 
@@ -60,4 +60,23 @@ button, input[type="submit"] {
     border: none;
     cursor: pointer;
     outline: inherit;
+}
+
+.chinese-wrapper {
+    margin: 1rem;
+}
+
+.chinese-wrapper p, .translate p {
+    padding: 0;
+    margin: 0;
+}
+
+.hanzi {
+    font-size: 5rem;
+}
+
+.pinyin {
+    font-size: 3rem;
+    background-color: #131313;
+    color: azure;
 }
