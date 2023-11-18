@@ -2,14 +2,14 @@ from django.shortcuts import render
 from django.http import Http404
 from apps.words.models import Word
 
-# convert querySet to list
-words_list = list(Word.objects.all())
-
-# get wordcount with len()
-total_wordcount = len(words_list)
-
 # Define a view function 'static_page' that takes a 'request' and a 'pagename' as parameters.
 def static_page(request, pagename):
+    # convert querySet to list
+    words_list = Word.objects.all()
+
+    # get wordcount with len()
+    total_wordcount = len(words_list)
+
     try:
         # Try to render an HTML template with the given 'pagename'.
         # Create a 'context' dictionary to pass data to the template.

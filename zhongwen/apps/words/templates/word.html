@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>La palabra seleccionada es:</h1>
+    <h2>{{ word.pinyin }} - ({{ word.es }})</h2>
+    <p class="hanzi">{{ word.zw }}</p>
+{% endblock content %}

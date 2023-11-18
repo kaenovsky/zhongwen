@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    max-width: 30rem;
+    max-width: 60rem;
     margin: 0 auto;
 }
 
@@ -63,7 +63,8 @@ button, input[type="submit"] {
 }
 
 .chinese-wrapper {
-    margin: 1rem;
+    margin: 0 auto;
+    max-width: 20rem;
 }
 
 .chinese-wrapper p, .translate p {
@@ -79,4 +80,24 @@ button, input[type="submit"] {
     font-size: 3rem;
     background-color: #131313;
     color: azure;
+}
+
+.translate {
+    margin-bottom: 2rem;
+}
+
+/* Form add word */
+
+.add-word-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.add-word-wrapper form {
+    text-align: right;
+}
+
+.input-item label {
+    margin-right: 2rem;   
 }

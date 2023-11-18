@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Cargar una nueva palabra</h1>
+    <p>Agrega una palabra en Inglés (en), Español (es), Chino (zw) y Pinyin.</p>
+    <form method="POST" action="{% url 'word_create' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">Guardar</button>
+    </form>
+{% endblock content %}
