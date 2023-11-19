@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
+from django.views.generic.edit import UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from apps.words.models import Word
 from apps.words.forms import WordForm
@@ -39,11 +40,3 @@ class WordFormView(LoginRequiredMixin, CreateView):
 class WordSuccess(LoginRequiredMixin, TemplateView):
     template_name = "word_success.html"
 
-# class WordUpdateFormView(LoginRequiredMixin, CreateView):
-#     form_class = WordForm
-#     template_name = 'word_update.html'
-#     success_url = reverse_lazy('words')
-
-#     def form_valid(self, form):
-#         form.save()
-#         return super().form_valid(form)

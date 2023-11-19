@@ -16,6 +16,18 @@ main {
     margin: 0 auto;
 }
 
+.logo-container {
+    margin: 1rem;
+}
+
+.logo {
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    color: azure;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 h1 {
     font-size: 2rem;
 }
@@ -52,6 +64,10 @@ nav ul li {
     color: #131313;
 }
 
+.btn-bg {
+    padding: .3rem 2.4rem;
+}
+
 table {
     margin: 3rem auto 1rem auto;
 }
@@ -76,6 +92,7 @@ button, input[type="submit"] {
 
 .hanzi {
     font-size: 5rem;
+    margin: 0;
 }
 
 .pinyin {
@@ -98,8 +115,20 @@ button, input[type="submit"] {
 
 .add-word-wrapper form {
     text-align: right;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.add-word-wrapper form label,
+.add-word-wrapper form p {
+    margin: 0;
+    padding: 0;
 }
 
 .add-word-wrapper form label {
-    margin-right: 2rem;   
+    margin-right: 1rem;
+}
+
+.add-word-wrapper button {
+    margin-top: .4rem;
 }

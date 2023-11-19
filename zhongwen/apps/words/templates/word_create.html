@@ -6,7 +6,7 @@
         <form method="POST" action="{% url 'word_create' %}">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="btn" type="submit">Guardar</button>
+            <button class="btn btn-bg" type="submit">Guardar</button>
         </form>
     <div>
 {% endblock content %}
