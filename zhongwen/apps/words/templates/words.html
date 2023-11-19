@@ -3,12 +3,12 @@
     <h1>Palabras</h1>
     <p>Acá vemos la primera palabra que vamos a aprender. Es un saludo!</p>
     <div class="chinese-wrapper">
-        <p class="hanzi">{{ zw }}</p>
-        <p class="pinyin">{{ pinyin }}</p>
+        <p class="hanzi">{{ first_word.zw }}</p>
+        <p class="pinyin">{{ first_word.pinyin }}</p>
     </div>
     <div class="translate">
-        <p>En español: {{ es }}</p>
-        <p>En inglés: {{ en }}</p>
+        <p>En español: {{ first_word.es }}</p>
+        <p>En inglés: {{ first_word.en }}</p>
     </div>
     <a class="btn" href="{% url 'word_create' %}">Cargar nueva palabra</a>
 {% endblock content %}

@@ -98,6 +98,6 @@ button, input[type="submit"] {
     text-align: right;
 }
 
-.input-item label {
+.add-word-wrapper form label {
     margin-right: 2rem;   
 }

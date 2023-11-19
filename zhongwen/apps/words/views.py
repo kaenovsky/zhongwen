@@ -11,12 +11,9 @@ class WordsTemplateView(LoginRequiredMixin, TemplateView):
     template_name = "words.html"
 
     def get_context_data(self, **kwargs):
-        words_list = Word.objects.all()
+        first_word = Word.objects.get(id=1)
         context = super().get_context_data(**kwargs)
-        context['es'] = words_list[0].es
-        context['en'] = words_list[0].en
-        context['zw'] = words_list[0].zw
-        context['pinyin'] = words_list[0].pinyin
+        context['first_word'] = first_word        
         return context
 
 class WordTemplateView(LoginRequiredMixin, TemplateView):
@@ -33,8 +30,20 @@ class WordTemplateView(LoginRequiredMixin, TemplateView):
 class WordFormView(LoginRequiredMixin, CreateView):
     form_class = WordForm
     template_name = 'word_create.html'
-    success_url = reverse_lazy('words')
+    success_url = reverse_lazy('word_success')
 
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+class WordSuccess(LoginRequiredMixin, TemplateView):
+    template_name = "word_success.html"
+
+# class WordUpdateFormView(LoginRequiredMixin, CreateView):
+#     form_class = WordForm
+#     template_name = 'word_update.html'
+#     success_url = reverse_lazy('words')
+
+#     def form_valid(self, form):
+#         form.save()
+#         return super().form_valid(form)
