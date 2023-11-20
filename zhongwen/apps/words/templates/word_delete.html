@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>¿Desea eliminar la palabra {{ word.id }}?</h1>
+    <p>Para proceder haga clic en el botón eliminar.</p>
+    <p>La palabra a eliminar es:</p>
+    <h2>{{ word.pinyin }} - ({{ word.es }})</h2>
+    <p class="hanzi">{{ word.zw }}</p>
+    <div class="add-word-wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn" type="submit">Eliminar</button>
+        </form>
+    <div>
+{% endblock content %}

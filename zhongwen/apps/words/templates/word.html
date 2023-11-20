@@ -3,4 +3,8 @@
     <h1>La palabra seleccionada es:</h1>
     <h2>{{ word.pinyin }} - ({{ word.es }})</h2>
     <p class="hanzi">{{ word.zw }}</p>
+    <div class="update-actions">
+        <a class="btn btn-bg" href="{{ word.id }}/update">Editar</a>
+        <a class="btn btn-bg" href="{{ word.id }}/delete">Eliminar</a>
+    </div>
 {% endblock content %}

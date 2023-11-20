@@ -3,7 +3,7 @@
     <h1>Cargar una nueva palabra</h1>
     <p>Agrega una palabra en Inglés (en), Español (es), Chino (zw) y Pinyin.</p>
     <div class="add-word-wrapper">
-        <form method="POST" action="{% url 'word_create' %}">
+        <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <button class="btn btn-bg" type="submit">Guardar</button>

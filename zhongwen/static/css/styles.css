@@ -132,3 +132,7 @@ button, input[type="submit"] {
 .add-word-wrapper button {
     margin-top: .4rem;
 }
+
+.update-actions {
+    margin: 1rem;
+}
