@@ -2,6 +2,16 @@ from django.shortcuts import render
 from django.http import Http404
 from apps.words.models import Word
 
+# Define a view function for home page
+def home_page(request):
+    try:
+        context = {
+            'pagename': 'home', # default pagename for the home page
+        }
+        return render(request, 'home.html', context)
+    except:
+        raise Http404("Page not found")
+
 # Define a view function 'static_page' that takes a 'request' and a 'pagename' as parameters.
 def static_page(request, pagename):
     # convert querySet to list
