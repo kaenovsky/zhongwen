@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Números</h1>
+    <p>Nos enfocaremos en aprender los números hasta el 10.</p>
+    <h2>Empezando por el 0</h2>
+    <div class="chinese-wrapper">
+        <p class="hanzi">零</p>
+        <p class="pinyin">líng</p>
+    </div>
+    <div class="translate">
+        <p>En español: Cero</p>
+        <p>En inglés: Zero</p>
+    </div>
+    <a class="btn btn-bg" href="{% url 'number_create' %}">Cargar número</a>
+{% endblock content %}

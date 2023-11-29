@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Editar palabra</h1>
+    <p>Modifica la palabra seleccionada en Inglés (en), Español (es), Chino (zw) y Pinyin.</p>
+    <div class="add-word-wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn" type="submit">Guardar</button>
+        </form>
+    <div>
+{% endblock content %}

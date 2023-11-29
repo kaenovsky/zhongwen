@@ -10,11 +10,11 @@ from apps.words.forms import WordForm
 class WordsTemplateView(LoginRequiredMixin, TemplateView):
     template_name = "words.html"
 
-    def get_context_data(self, **kwargs):
+    """ def get_context_data(self, **kwargs):
         first_word = Word.objects.get(id=1)
         context = super().get_context_data(**kwargs)
         context['first_word'] = first_word        
-        return context
+        return context """
 
 class WordTemplateView(LoginRequiredMixin, TemplateView):
     template_name = "word.html"

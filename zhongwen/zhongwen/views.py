@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 from apps.words.models import Word
+from apps.numbs.models import Numb
 
 # Define a view function for home page
 def home_page(request):
@@ -14,11 +15,13 @@ def home_page(request):
 
 # Define a view function 'static_page' that takes a 'request' and a 'pagename' as parameters.
 def static_page(request, pagename):
-    # convert querySet to list
+    # convert words and numbers querySet to list
     words_list = Word.objects.all()
+    numbs_list = Numb.objects.all()
 
-    # get wordcount with len()
+    # get counts with len()
     total_wordcount = len(words_list)
+    total_numbscount = len(numbs_list)
 
     try:
         # Try to render an HTML template with the given 'pagename'.
@@ -26,7 +29,8 @@ def static_page(request, pagename):
         context = {
             'pagename': pagename,
             # Add any other data to context here.
-            'wordcount': total_wordcount
+            'wordcount': total_wordcount,
+            'numbscount': total_numbscount,
         }
         # Use the 'render' function to render the template with the provided 'context'.
         return render(request, f"{pagename}.html", context)

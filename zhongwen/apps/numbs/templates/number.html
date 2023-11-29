@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>El número seleccionado es:</h1>
+    <h2>{{ number.num }}</h2>
+    <p class="hanzi">{{ number.zw }}</p>
+    <p>En pinyin se pronuncia: {{ number.pinyin }}</p>
+    <div class="update-actions">
+        <a class="btn btn-bg" href="{{ number.id }}/update">Editar</a>
+        <a class="btn btn-bg" href="{{ number.id }}/delete">Eliminar</a>
+    </div>
+{% endblock content %}

@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Word(models.Model):
     en = models.CharField(max_length=20) # word in English
     es = models.CharField(max_length=20) # word in Spanish

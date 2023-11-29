@@ -19,9 +19,10 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('', views.home_page),  # Handle the case when the path is empty
+    path('<str:pagename>/', views.static_page),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path("words/", include("apps.words.urls")),
-    path('', views.home_page),  # Handle the case when the path is empty
-    path('<str:pagename>/', views.static_page),
+    path("numbers/", include("apps.numbs.urls")),
 ]

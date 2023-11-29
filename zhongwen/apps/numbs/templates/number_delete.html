@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>¿Desea eliminar el número {{ number.num }}?</h1>
+    <p>Para proceder haga clic en el botón eliminar.</p>
+    <div class="add-word-wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn" type="submit">Eliminar</button>
+        </form>
+    <div>
+{% endblock content %}

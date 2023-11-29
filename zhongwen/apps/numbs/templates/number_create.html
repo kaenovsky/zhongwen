@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Cargar un nuevo número</h1>
+    <p>Agrega un número en decimal, Chino (zw) y Pinyin.</p>
+    <div class="add-word-wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-bg" type="submit">Guardar</button>
+        </form>
+    <div>
+{% endblock content %}
