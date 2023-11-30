@@ -1,0 +1,15 @@
+chinobasico.ar {
+  bind {$ADDRESS}
+  proxy / web:8000
+  tls tosco@duck.com
+}
+
+chinobasico.ar/static/ {
+  root /zhongwen/staticfiles/
+  tls tosco@duck.com
+}
+
+chinobasico.ar/media/ {
+  root /zhongwen/media/
+  tls tosco@duck.com
+}
