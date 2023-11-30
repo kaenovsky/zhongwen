@@ -1,6 +1,12 @@
 # Use an official Python runtime as a parent image
 FROM python:3
 
+# nginx
+FROM nginx
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY mysite.conf /etc/nginx/conf.d
+
 # Set environment variable to prevent buffering of Python output
 ENV PYTHONUNBUFFERED 1
 
