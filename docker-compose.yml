@@ -32,9 +32,9 @@ services:
       build: ./nginx/
       volumes: 
         - ./nginx/:/etc/nginx/conf.d
-        - ./logs/:/code/logs
-        - static:/code/static_cdn
-        - media:/code/media_cdn
+        - ./logs/:/zhongwen/logs
+        - static:/zhongwen/static_cdn
+        - media:/zhongwen/media_cdn
       ports: 
         - "1221:80"
       links:
@@ -44,4 +44,3 @@ volumes:
   pgdata:
   media:
   static:
-  caddy_certs:
