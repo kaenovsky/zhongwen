@@ -1,46 +1,22 @@
-version: '3'
+version: "3"
 services:
-
-  web:
-      build: .
-      depends_on:
-        - postgres
-      container_name: zhongwen
-      volumes:
-      - .:/zhongwen
-      - static:/zhongwen/staticfiles
-      - media:/zhongwen/media
-      expose:
-        - 8000
-      command: bash -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate && gunicorn --workers=3 zhongwen.wsgi -b 0.0.0.0:8000"
-
-  postgres:
-      build: ./postgres
-      restart: unless-stopped
-      expose:
-        - "5432"
-      environment:   # will be used by the init script
-        LC_ALL: C.UTF-8
-        POSTGRES_USER: POSTGRES_USER
-        POSTGRES_PASSWORD: POSTGRES_PASSWORD
-        POSTGRES_DB: POSTGRES_DB
-      volumes:
-        - pgdata:/var/lib/postgresql/data/  
-
-  nginx:
-      restart: always
-      build: ./nginx/
-      volumes: 
-        - ./nginx/:/etc/nginx/conf.d
-        - ./logs/:/zhongwen/logs
-        - static:/zhongwen/static_cdn
-        - media:/zhongwen/media_cdn
-      ports: 
-        - "1221:80"
-      links:
-        - web 
-
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"  # Expose the PostgreSQL port if needed
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  zhongwen:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./zhongwen:/zhongwen
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+    env_file:
+      - .env
 volumes:
   pgdata:
-  media:
-  static:
