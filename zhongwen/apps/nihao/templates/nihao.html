@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Nihao 👋 Hola</h1>
+<p>✉️ Si solo pasa a saludar, deje su mensaje ✉️</p>
+<div class="form-wrapper contact">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-bg" type="submit">Enviar</button>
+    </form>
+ <div> 
+{% endblock content %}

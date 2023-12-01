@@ -107,32 +107,44 @@ button, input[type="submit"] {
 
 /* Form add word */
 
-.add-word-wrapper {
+.form-wrapper {
     display: flex;
     justify-content: center;
     margin: 2rem;
 }
 
-.add-word-wrapper form {
+.form-wrapper form {
     text-align: right;
     display: flex;
     flex-flow: column nowrap;
 }
 
-.add-word-wrapper form label,
-.add-word-wrapper form p {
+.form-wrapper form label,
+.form-wrapper form p {
     margin: 0;
     padding: 0;
 }
 
-.add-word-wrapper form label {
+.form-wrapper form label {
     margin-right: 1rem;
 }
 
-.add-word-wrapper button {
+.form-wrapper button {
     margin-top: .4rem;
 }
 
 .update-actions {
     margin: 1rem;
+}
+
+.contact form label {
+    font-size: 1.3rem;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+}
+
+.contact form {
+    text-align: left;
 }
