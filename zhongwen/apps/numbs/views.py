@@ -7,16 +7,15 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from apps.numbs.models import Numb
 from apps.numbs.forms import NumbForm
 
-class NumbsTemplateView(LoginRequiredMixin, TemplateView):
+class NumbsTemplateView(TemplateView):
     template_name = "numbers.html"
 
     def get_context_data(self, **kwargs):
-        first_number = Numb.objects.get(id=1)
         context = super().get_context_data(**kwargs)
-        context['first_number'] = first_number        
+        context["numbs"] = Numb.objects.all()
         return context
 
-class NumbTemplateView(LoginRequiredMixin, TemplateView):
+class NumbTemplateView(TemplateView):
     template_name = "number.html"
 
     def get_context_data(self, **kwargs):

@@ -7,16 +7,15 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from apps.words.models import Word
 from apps.words.forms import WordForm
 
-class WordsTemplateView(LoginRequiredMixin, TemplateView):
+class WordsTemplateView(TemplateView):
     template_name = "words.html"
 
-    """ def get_context_data(self, **kwargs):
-        first_word = Word.objects.get(id=1)
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['first_word'] = first_word        
-        return context """
+        context["words"] = Word.objects.all()
+        return context
 
-class WordTemplateView(LoginRequiredMixin, TemplateView):
+class WordTemplateView(TemplateView):
     template_name = "word.html"
 
     def get_context_data(self, **kwargs):

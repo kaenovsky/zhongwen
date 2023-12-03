@@ -1,0 +1,14 @@
+{% block words %}
+    {% if user.is_authenticated %}
+    <div class="other-numbers">
+        <p>Otras palabras:</p>
+        <ul>
+            {% for i in words %}
+            <a class="btn btn-bg" href="./{{ i.id }}">
+                <li>{{ i.zw }}</li>
+            </a>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+{% endblock words %}

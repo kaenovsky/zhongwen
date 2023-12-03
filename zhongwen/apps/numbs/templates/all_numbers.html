@@ -1,0 +1,14 @@
+{% block numbers %}
+    {% if user.is_authenticated %}
+    <div class="other-numbers">
+        <p>Otros números:</p>
+        <ul>
+            {% for i in numbs %}
+            <a class="btn btn-bg" href="./{{ i.id }}">
+                <li>{{ i.num }}</li>
+            </a>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+{% endblock numbers %}

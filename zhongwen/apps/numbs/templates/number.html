@@ -3,9 +3,12 @@
     <h1>El número seleccionado es:</h1>
     <h2>{{ number.num }}</h2>
     <p class="hanzi">{{ number.zw }}</p>
-    <p>En pinyin se pronuncia: {{ number.pinyin }}</p>
+    <p>En pinyin se pronuncia: {{ number.pinyin }}</p>    
+    {% if user.is_authenticated %}
     <div class="update-actions">
         <a class="btn btn-bg" href="{{ number.id }}/update">Editar</a>
         <a class="btn btn-bg" href="{{ number.id }}/delete">Eliminar</a>
     </div>
+    {% endif %}
+    <a class="btn btn-bg" href="/numbers">Ver números</a>
 {% endblock content %}

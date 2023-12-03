@@ -11,5 +11,8 @@
         <p>En español: Cero</p>
         <p>En inglés: Zero</p>
     </div>
-    <a class="btn btn-bg" href="{% url 'number_create' %}">Cargar número</a>
+    {% if user.is_authenticated %}
+    <a class="btn btn-bg" href="{% url 'number_create' %}">Cargar nuevo número</a>
+    {% endif %}   
+    {% include "./all_numbers.html" %}
 {% endblock content %}
