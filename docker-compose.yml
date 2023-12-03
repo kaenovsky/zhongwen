@@ -1,11 +1,5 @@
 version: "3"
 services:
-  db:
-    image: postgres
-    ports:
-      - "5432:5432"  # Expose the PostgreSQL port if needed
-    volumes:
-      - pgdata:/var/lib/postgresql/data
   zhongwen:
     build:
       context: .
@@ -14,8 +8,6 @@ services:
     volumes:
       - ./zhongwen:/zhongwen
     command: python manage.py runserver --insecure 0.0.0.0:8000
-    depends_on:
-      - db
     env_file:
       - .env
 volumes:

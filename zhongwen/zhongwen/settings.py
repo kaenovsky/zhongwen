@@ -87,34 +87,10 @@ WSGI_APPLICATION = 'zhongwen.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': 'db',  # Service name of the PostgreSQL container
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# Add a function to check if the database is available
-def check_db_connection():
-    try:
-        connections['default'].ensure_connection()
-    except OperationalError as e:
-        return False
-    return True
-
-# Wait for the database to become available
-max_retries = 30
-retry_delay = 2  # seconds
-
-for _ in range(max_retries):
-    if check_db_connection():
-        break
-    time.sleep(retry_delay)
-else:
-    raise Exception("Database connection could not be established.")
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
