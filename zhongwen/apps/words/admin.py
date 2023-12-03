@@ -1,5 +1,8 @@
 from django.contrib import admin
+from import_export.admin import ImportExportMixin
 from .models import Word
 
-# Register your models here.
-admin.site.register(Word)
+class WordAdmin(ImportExportMixin, admin.ModelAdmin):
+    list_display = ['en', 'es', 'zw', 'pinyin']
+
+admin.site.register(Word, WordAdmin)
