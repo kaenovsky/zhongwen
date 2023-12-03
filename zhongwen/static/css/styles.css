@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    max-width: 30rem;
+    max-width: 60rem;
     margin: 0 auto;
 }
 
@@ -41,13 +41,18 @@ nav ul {
     flex-flow: row wrap;
     justify-content: center;
     list-style: none;
-    max-width: 42rem;
+    max-width: 46rem;
     margin: 0 auto;
     padding-left: 0;
 }
 
 nav ul li {
     margin: .3rem;
+}
+
+.about {
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
 .btn {
@@ -58,6 +63,7 @@ nav ul li {
     border-radius: 4px;
     background-color: #131313;
     padding: .1rem 1.2rem;
+    margin: .2rem;
 }
 
 .btn:hover {
@@ -148,4 +154,15 @@ button, input[type="submit"] {
 
 .contact form {
     text-align: left;
+}
+
+/* all numbers buttons */
+
+.other-numbers ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
