@@ -1,0 +1,62 @@
+[
+    {
+      "id": 10,
+      "num": 10,
+      "zw": "十",
+      "pinyin": "shí"
+    },
+    {
+      "id": 9,
+      "num": 9,
+      "zw": "九",
+      "pinyin": "jiǔ"
+    },
+    {
+      "id": 8,
+      "num": 8,
+      "zw": "八",
+      "pinyin": "bā"
+    },
+    {
+      "id": 7,
+      "num": 7,
+      "zw": "七",
+      "pinyin": "qī"
+    },
+    {
+      "id": 6,
+      "num": 6,
+      "zw": "六",
+      "pinyin": "liù"
+    },
+    {
+      "id": 5,
+      "num": 5,
+      "zw": "五",
+      "pinyin": "wǔ"
+    },
+    {
+      "id": 4,
+      "num": 4,
+      "zw": "四",
+      "pinyin": "sì"
+    },
+    {
+      "id": 3,
+      "num": 3,
+      "zw": "三",
+      "pinyin": "sān"
+    },
+    {
+      "id": 2,
+      "num": 2,
+      "zw": "二",
+      "pinyin": "er"
+    },
+    {
+      "id": 1,
+      "num": 1,
+      "zw": "一",
+      "pinyin": "yī"
+    }
+  ]

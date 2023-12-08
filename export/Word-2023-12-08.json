@@ -1,0 +1,93 @@
+[
+    {
+      "id": 19,
+      "en": "you",
+      "es": "tú",
+      "zw": "你",
+      "pinyin": "nǐ"
+    },
+    {
+      "id": 18,
+      "en": "I",
+      "es": "yo",
+      "zw": "我",
+      "pinyin": "wǒ"
+    },
+    {
+      "id": 17,
+      "en": "milk",
+      "es": "leche",
+      "zw": "牛奶",
+      "pinyin": "niúnǎi"
+    },
+    {
+      "id": 13,
+      "en": "noodle",
+      "es": "fideos",
+      "zw": "面",
+      "pinyin": "miàn"
+    },
+    {
+      "id": 12,
+      "en": "book",
+      "es": "libro",
+      "zw": "书",
+      "pinyin": "shū"
+    },
+    {
+      "id": 11,
+      "en": "family",
+      "es": "familia",
+      "zw": "家庭",
+      "pinyin": "jiātíng"
+    },
+    {
+      "id": 10,
+      "en": "doctor",
+      "es": "doctor",
+      "zw": "医生",
+      "pinyin": "yīshēng"
+    },
+    {
+      "id": 9,
+      "en": "dog",
+      "es": "perro",
+      "zw": "狗",
+      "pinyin": "gǒu"
+    },
+    {
+      "id": 8,
+      "en": "cat",
+      "es": "gato",
+      "zw": "猫",
+      "pinyin": "māo"
+    },
+    {
+      "id": 7,
+      "en": "student",
+      "es": "estudiante",
+      "zw": "学生",
+      "pinyin": "xue sheng"
+    },
+    {
+      "id": 4,
+      "en": "water",
+      "es": "agua",
+      "zw": "水",
+      "pinyin": "shui"
+    },
+    {
+      "id": 2,
+      "en": "goodbye",
+      "es": "chau",
+      "zw": "再见",
+      "pinyin": "zàijiàn"
+    },
+    {
+      "id": 1,
+      "en": "hello",
+      "es": "hola",
+      "zw": "你好",
+      "pinyin": "nihao"
+    }
+  ]
